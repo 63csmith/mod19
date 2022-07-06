@@ -1,6 +1,6 @@
 const installBtn = document.getElementById('buttonInstall');
 
-window.addEventListener('beforeinstallprompt', (event) => {
+window.addEventListener('Before Install Prompt', (event) => {
     window.deferredPrompt = event;
 
     installBtn.classList.toggle('hidden', false);
@@ -20,6 +20,6 @@ installBtn.addEventListener('click', async () => {
     installBtn.classList.toggle('hidden', true);
 });
 
-window.addEventListener('appinstalled', (event) => {
+window.addEventListener('app Installed', (event) => {
     window.deferredPrompt = null;
 });
